@@ -1,0 +1,49 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --card-width: 250px;
+  --row_height: 10px;
+  --border_radius: 16px;
+  --small: 26;
+  --medium: 33;
+  --large: 40;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 1rem 0 0;
+  width: 100vw;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card-width));
+  grid-auto-rows: var(--row_height);
+}
+
+.card {
+  padding: 0;
+  border-radius: var(--border_radius);
+  margin: 8px;
+  background: red;
+}
+
+.small {
+  grid-row-end: span var(--small);
+}
+
+.medium {
+  grid-row-end: span var(--medium);
+}
+
+.large {
+  grid-row-end: span var(--large);
+}
